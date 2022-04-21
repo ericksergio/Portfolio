@@ -5,3 +5,94 @@
 /*Google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Press+Start+2P&family=Yatra+One&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-wrapper{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.img-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    animation: zoom 15s;
+}
+
+@keyframes zoom{
+    0%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.banner{
+    position: absolute;
+    top: 30%;
+    left:10%;
+}
+
+.banner h1{
+    color: #fff;
+    font-size: 2.5em;
+    font-family: "Press Start 2P", sans-serif;
+    line-height: 1.5em;
+    text-shadow: .3rem .4rem rgba(0,0,0,.4);
+    margin-bottom: 2rem;
+    animation: moveBanner 1s ;
+}
+
+.banner p{
+    font-family: "Yatra", sans-serif;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-shadow: .2rem .3rem rgba(0,0,0,.4);
+   
+    animation: moveBanner 1s ;
+}
+
+.banner button{
+    font-family: "Acme", sans-serif;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing:.1rem;
+    color: #fff;
+    background-color: rgb(29, 137, 176);
+    padding: 1em 2.5em;
+    box-shadow: .2rem .3rem rgba(0,0,0,.4);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+   
+    animation: moveBanner 1s ;
+}
+
+.banner button:hover{
+    transform: scale(1.2);
+    transition: ease;
+}
+
+@keyframes moveBanner{
+    0%{
+        transform: translateY(10rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
